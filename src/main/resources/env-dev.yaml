@@ -1,0 +1,59 @@
+environment: "dev"
+http:
+  host: "devopenapi.velobank.com" 
+  port: "443"
+  listener:
+    port: "8081"
+user: "![cf8aIFYN3Xs=]"
+    
+trulioo:
+  idauthentication:
+    path: "api/process/customerverification/truliooauthentication"
+    
+partner:
+  accountcreate:
+    path: "api/process/partner/account/create"
+  caseApproved:
+    path: "api/process/partner/account/case/update"  
+    
+bbaeEndPoint:
+  host: "transformer-openapi--develop-03.bbaecache.com"
+  updateApplication:
+    #host: "transformer-web--develop-03.bbaecache.com"
+    #path: "api/v2/veloAccount/updateApplication"
+    path: "v2/velo/updateAccountApplication"
+  createSession:
+    #host: "transformer-openapi--develop-03.bbaecache.com"
+    path: "v2/security/createSession"
+  endSession:
+    #host: "transformer-openapi--develop-03.bbaecache.com"
+    path: "v2/security/logout"
+    
+variables:
+  APPLICATION:
+    TYPE: 
+      "CREATE": "Create"
+      "UPDATE": "Update"
+    STATUS:
+      "APPROVED": "Approved"
+      "PENDING": "Pending"
+      "DENIED": "Denied"
+      "DECLINED": "Declined"
+  caseStatus:
+    PENDING: "Pending"
+    APPROVED: "Approved"
+  
+api:
+  id: "15552660"
+  
+json:
+  logger:
+    application:
+      name: ${project.artifactId}
+      version: ${project.version}
+      
+salesforce:
+  username: "api.user@eastwestbank.com.dodev"
+  password: "Velo@EWB$1"
+  token: "cl5RdaY8MUH9toCwZWVRir1J"
+  url: "https://test.salesforce.com/services/Soap/u/42.0"
